@@ -8,15 +8,16 @@ const Word = mongoose.model('Word', {
     isMemorized : {type : Boolean , require : true,default : false}
 });
 
+module.exports = {Word}
 //SELECT
 // Word.find({})
 // .then(words => console.log(words));
 
 //INSERT
-const word = new Word({en : 'Three' , vn : 'Ba'});
-word.save()
-.then(w => console.log(w))
-.catch(error => console.log(error.message));
+// const word = new Word({en : 'Three' , vn : 'Ba'});
+// word.save()
+// .then(w => console.log(w))
+// .catch(error => console.log(error.message));
 
 //UPDATE
 // Word.findByIdAndUpdate('5cc04c2bade01025c43c9ff6',{isMemorized : false} ,{new : true})
