@@ -21,7 +21,7 @@ app.get('/cong/:a/:b' , (req , res) => {
     .catch(error => console.log(error));
 });
 
-app.put("/chia" , (req,res) =>{
+app.post("/chia" , (req,res) =>{
     const {a , b} = req.body;
     if(isNaN(a) || isNaN(b)){
         return res.send({success : false , message : 'INVALID_TYPE'});
