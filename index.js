@@ -1,13 +1,16 @@
 const express = require('express');
 const {json} = require('body-parser');
 const {Word} = require('./word.model');
+var cors = require('cors')
+
 const app = express();
 
 app.use(json());
+app.use(cors());
 
 app.get('/words',(req,res) =>{
     Word.find({})
-    .then(words => res.send({success : words}));
+    .then(words => res.send({success : true , words}));
 });
 app.post('/word' ,(req,res) =>{
     const {en , vn} = req.body;
