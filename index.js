@@ -43,4 +43,4 @@ app.delete('/word/:_id' , (req,res)=>{
 
 });
 
-app.listen('4000' ,() => console.log("Server Started"));
+app.listen(process.env.PORT || '4000' ,() => console.log("Server Started"));
